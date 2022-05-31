@@ -1,0 +1,32 @@
+.articls {
+    border: 5px solid rosybrown;
+    border-radius:15px;
+    margin: 10px 0px 10px 0px;
+}
+.articls-border-down {
+    border-bottom: 1px solid black;
+}
+.card-footer-link {
+    padding: 0.5rem 1rem;
+
+}
+.form-home {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.card-title {
+    font-weight: bold;
+
+}
+.card-text {
+    font-family: PillAlt600mg-Medium, serif;
+    font-size: 12px;
+}
+.btn-delete-margin {
+    margin: 10px 0px;
+}
+.right {
+    display: flex;
+    justify-content: space-between;
+}

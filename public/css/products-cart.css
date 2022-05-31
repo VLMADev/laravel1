@@ -1,0 +1,23 @@
+.card-product-body {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.card-product {
+    flex: 1;
+    background: #70b1f3;
+    margin: 10px;
+    text-align: left;
+}
+.card-product-title {
+    display: block;
+
+}
+.card-product-text {
+    display: block;
+    background: #c6c6c6;
+
+}
+.card-product-all {
+    text-align: center;
+}
