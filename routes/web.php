@@ -41,6 +41,8 @@ Route::post('ajax/catalog',[Controllers\AjaxController::class, 'postCatalog']);
 
 Route::controller(App\Http\Controllers\ProductController::class)->prefix('product') ->group(function (){
     Route::get('all', 'getAll');
+    Route::get('/category/{category}', 'getCategory');
+    Route::get("{product}", 'getOne')->where(['product'=>'[0-9]+']);
 });
 
 Route::controller(Controllers\MaintextController::class)->group(function () { //все маршруты что будут находится тут будут относится к MaintextController

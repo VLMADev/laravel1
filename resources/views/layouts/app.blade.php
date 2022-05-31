@@ -78,8 +78,8 @@
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Выйти') }}
                                 </a>
-                                <a role="button" class="dropdown-item nav-link" href="{{asset('home/')}}">Личный кабинет</a>
-                                <a role="button" class="dropdown-item nav-link" href="{{asset('admin/')}}">Админ панель</a>
+                                <a role="button" class="dropdown-item" href="{{asset('home/')}}">Личный кабинет</a>
+                                <a role="button" class="dropdown-item" href="{{asset('admin/')}}">Админ панель</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>

@@ -15,4 +15,12 @@ class ProductController extends Controller
         return view('products',compact('catalog','product_none_category'));
 
     }
+    //public function getOne(Product $product){ - внедрение зависимости
+    public function getOne(Product $product){
+        return view('product_one', compact('product'));
+    }
+
+    public function getCategory(Category $category){
+        return view('category_one',compact('category'));
+    }
 }
