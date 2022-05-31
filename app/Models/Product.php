@@ -16,9 +16,17 @@ class Product extends Model
         return $query->where('status','vip');
         //return $query->where('status','vip')->get(); тогда в скопе не используем гет
     }
+
+    public function fullName(){
+        return $this->name.''.$this->subname;
+        // в блейдах и контроллерах будет $user->full_name
+    }
 }
 
 // на главной странице надо показать товары VIP
 // зпрос на главнйо странице
 // Product::vipStatus()->get();
 //// Product::vipStatus()->populat()->get();
+///
+///
+
