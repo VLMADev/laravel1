@@ -4,6 +4,6 @@
         <h5 class="card-title">{{$prod->name}}</h5>
         <p class="card-text card-product-text">Описание:<br> {!!$prod->body!!}</p><br>
         <p class="card-price">Price: {!!$prod->price!!}</p>
-        <a href="{{asset('product/'.$prod->id)}}" class="btn btn-primary">Подробнее</a>
+        <a href="{{asset('product/'.$prod->id)}}" class="btn btn-primary">Подробнее1</a>
     </div>
 </div>
