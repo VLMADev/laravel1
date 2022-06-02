@@ -3,7 +3,6 @@ $(function () {
         e.preventDefault();// чтобы не отматывала экран
         var id = $(this).attr('data-id');
         $.ajax({
-            type:'post',
             url:'/ajax/catalog',
             data:'id='+id,
             success:function (data){

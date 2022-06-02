@@ -9,10 +9,10 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Продукты</div>
+                    <a class="btn btn-dark" href="{{asset('product/vip')}}">VIP PRODUCTS</a>
                     <div class="card-product-all">
                         @foreach($catalog as $item)
                             <h2>{{$item->name}}</h2>
-
                             <div class="card-product-body">
                                 @foreach($item->products as $prod)
                                     @include('includes.product')
@@ -21,7 +21,6 @@
                         @endforeach
                         <div>
                             <h2 class="card-product-title">Без категории</h2>
-
                             <div class="card-product-body">
                                 @foreach($product_none_category as $prod)
                                     @include('includes.product'){{-- папка includes файл product.blade.php --}}
