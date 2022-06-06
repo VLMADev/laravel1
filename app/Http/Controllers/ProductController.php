@@ -19,6 +19,10 @@ class ProductController extends Controller
     public function getOne(Product $product){
         return view('product_one', compact('product'));
     }
+    public function getVip(){
+        $products = Product::vipStatus()->get();
+        return view('vip_status', compact('products'));
+    }
 
     public function getCategory(Category $category){
         return view('category_one',compact('category'));

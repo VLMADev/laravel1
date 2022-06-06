@@ -24,8 +24,7 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 
-
-Route::controller(App\Http\Controllers\HomeController::class)->prefix('home')->group(function (){
+Route::controller(App\Http\Controllers\HomeController::class)->prefix('home')->group(function () {
     Route::post('/', 'postIndex');
     Route::get('/', 'index')->name('home');
     Route::post('{arcticle}/edit', 'postEdit');
@@ -35,15 +34,20 @@ Route::controller(App\Http\Controllers\HomeController::class)->prefix('home')->g
 
 });
 
-Route::get('categors/{id}',[Controllers\CategoriesController::class, 'getIndex']);
-Route::get('/',[Controllers\IndexControllers::class, 'getIndex']);
-Route::post('ajax/catalog',[Controllers\AjaxController::class, 'postCatalog']);
-
-Route::controller(App\Http\Controllers\ProductController::class)->prefix('product') ->group(function (){
-    Route::get('all', 'getAll');
-    Route::get('/category/{category}', 'getCategory');
-    Route::get("{product}", 'getOne')->where(['product'=>'[0-9]+']);
+Route::get('categors/{id}', [Controllers\CategoriesController::class, 'getIndex']);
+Route::get('/', [Controllers\IndexControllers::class, 'getIndex']);
+Route::controller(Controllers\AjaxController::class)->prefix('ajax')->group(function(){
+    Route::post('catalog', 'postCatalog');
+    Route::post('maintext', 'postMaintext');
 });
+
+Route::controller(App\Http\Controllers\ProductController::class)->prefix('product')->group(function () {
+    Route::get('all', 'getAll');
+    Route::get('vip', 'getVip');
+    Route::get('/category/{category}', 'getCategory');
+    Route::get("{product}", 'getOne')->where(['product' => '[0-9]+']);
+});
+
 
 Route::controller(Controllers\MaintextController::class)->group(function () { //все маршруты что будут находится тут будут относится к MaintextController
     Route::get('{maintext}', 'getIndex')->where('maintext', '[0-9]+');
