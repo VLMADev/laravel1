@@ -14,9 +14,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Продукты</div>
-                    <aside class="card">
-                        <a class="btn btn-dark text-warning" href="{{asset('product/vip')}}">VIP PRODUCTS</a>
-                    </aside>
+                    <div class="card">
+                        <a class="btn btn-dark text-warning fw-bold" href="{{asset('product/vip')}}">VIP PRODUCTS</a>
+                    </div>
                     <div class="card-product-all">
                         @foreach($catalog as $item)
                             <h2>{{$item->name}}</h2>

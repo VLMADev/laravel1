@@ -6,9 +6,9 @@
         <p class="card-text card-product-text">Описание: {!!$prod->body!!}</p>
     </div>
     <div class="card-body">
-        <p class="card-price">Price: {!!$prod->price!!}</p>
-        <a class="price-show" data-id="{{$prod->price}}" href="#">Price:</a>
-        <div class="price-empty"></div>
+{{--        <p class="card-price">Price: {!!$prod->price!!}</p>--}}
+        <a class="price-show btn btn-dark" data-id="{!!$prod->id!!}" href="#">Price:</a>
+        <div class="price-empty{{$prod->id}}"></div>
     </div>
     <a href="{{asset('product/'.$prod->id)}}" class="btn btn-success">Подробнее</a>
 </div>

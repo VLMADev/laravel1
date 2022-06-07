@@ -36,9 +36,12 @@ Route::controller(App\Http\Controllers\HomeController::class)->prefix('home')->g
 
 Route::get('categors/{id}', [Controllers\CategoriesController::class, 'getIndex']);
 Route::get('/', [Controllers\IndexControllers::class, 'getIndex']);
+
+
 Route::controller(Controllers\AjaxController::class)->prefix('ajax')->group(function(){
     Route::post('catalog', 'postCatalog');
     Route::post('maintext', 'postMaintext');
+    Route::post('price', 'postPrice');
 });
 
 Route::controller(App\Http\Controllers\ProductController::class)->prefix('product')->group(function () {
@@ -46,7 +49,6 @@ Route::controller(App\Http\Controllers\ProductController::class)->prefix('produc
     Route::get('vip', 'getVip');
     Route::get('/category/{category}', 'getCategory');
     Route::get("{product}", 'getOne')->where(['product' => '[0-9]+']);
-    Route::post('price', 'postPrice');
 });
 
 

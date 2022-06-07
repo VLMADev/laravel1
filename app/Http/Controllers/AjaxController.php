@@ -18,6 +18,6 @@ class AjaxController extends Controller
     }
     public function postPrice(Request $request){
         $price_show = Product::find($request->id);
-        echo $price_show->price;
+       echo $price_show->price;
     }
 }

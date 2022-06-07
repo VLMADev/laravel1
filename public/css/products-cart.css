@@ -5,7 +5,7 @@
 }
 .card-product {
     flex: 1;
-    background: #70b1f3;
+    background: rgba(0, 0, 0, 0.11);
     margin: 10px;
     text-align: left;
 }
@@ -15,7 +15,7 @@
 }
 .card-product-text {
     display: block;
-    background: #c6c6c6;
+
 
 }
 .card-product-all {

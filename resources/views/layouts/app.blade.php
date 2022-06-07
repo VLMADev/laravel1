@@ -21,7 +21,7 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{asset('js/ajax_setup.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
-    <script src="{{ asset('js/app.js') }}" ></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     @stack('scripts')
 </head>
 <body>
@@ -101,17 +101,10 @@
 </body>
 <footer>
     <div>
-        <div>
-            @foreach($categories as $categors)
-                <h2><a href="{{asset('categories/'. $categors->id)}}">{{$categors->name}}</a></h2>
-            @endforeach
-        </div>
-        <div>
-            @foreach($company as $comp)
-                <h2><a class="articls_name" data-id="{{$comp->id}}" href="#">{{$comp->name}}</a></h2>
-            @endforeach
-        </div>
-        <div class="article_empty"></div>
+        @foreach($company as $comp)
+            <h2><a class="articls_name" data-id="{{$comp->id}}" href="#">{{$comp->name}}</a></h2>
+        @endforeach
     </div>
+    <div class="article_empty"></div>
 </footer>
 </html>
