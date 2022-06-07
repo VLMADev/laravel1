@@ -1,5 +1,6 @@
 @push('styles')
     <link href="{{ asset('css/articls.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/price.css') }}" rel="stylesheet">
 @endpush
 
 <div class="col">

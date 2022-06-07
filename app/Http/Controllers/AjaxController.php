@@ -16,4 +16,8 @@ class AjaxController extends Controller
         $maintext = Maintext::find($request->id);
         echo $maintext->body;
     }
+    public function postPrice(Request $request){
+        $price_show = Product::find($request->id);
+        echo $price_show->price;
+    }
 }

@@ -20,11 +20,12 @@ class ProductController extends Controller
         return view('product_one', compact('product'));
     }
     public function getVip(){
-        $products = Product::vipStatus()->get();
+        $products = Product::vipStatus();
         return view('vip_status', compact('products'));
     }
 
     public function getCategory(Category $category){
         return view('category_one',compact('category'));
     }
+
 }

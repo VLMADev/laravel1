@@ -46,6 +46,7 @@ Route::controller(App\Http\Controllers\ProductController::class)->prefix('produc
     Route::get('vip', 'getVip');
     Route::get('/category/{category}', 'getCategory');
     Route::get("{product}", 'getOne')->where(['product' => '[0-9]+']);
+    Route::post('price', 'postPrice');
 });
 
 
